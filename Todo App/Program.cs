@@ -10,25 +10,27 @@ do
     var userChoice = Console.ReadLine();
     validateUserInput(userChoice);
 
-
-    if (userChoice == "E" || userChoice == "e")
+    switch (userChoice)
     {
-        isUserExitRequested = true;
-    }
-
-    if(userChoice == "A" || userChoice == "a")
-    {
-        AddTodo();
-    }
-
-    if (userChoice == "S" || userChoice == "s")
-    {
-        SeeAllTodos();
-    }
-
-    if (userChoice == "R" || userChoice == "r")
-    {
-        RemoveTodo();
+        case "E":
+        case "e":
+            isUserExitRequested = true;
+            break;
+        case "A":
+        case "a":
+            AddTodo();
+            break;
+        case "S":
+        case "s":
+            SeeAllTodos();
+            break;
+        case "R":
+        case "r":
+            RemoveTodo();
+            break;
+        default:
+            Console.WriteLine("Invalid Option");
+            break;
     }
 
 } while (!isUserExitRequested);
@@ -85,7 +87,6 @@ void SeeAllTodos()
     if(TODOs.Count <= 0)
     {
         Console.WriteLine("No TODOs have been added yet;");
-        MenuDetails();
     }
 
     for (int i = 0; i < TODOs.Count; i++)
