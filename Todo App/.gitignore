@@ -1,0 +1,61 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# Visual Studio working folder
+.vs/
+
+# ASP.NET files
+project.lock.json
+project.fragment.lock.json
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+# Optional: NuGet cache
+~/.nuget/
+
+# .NET Core
+project.assets.json
+project.runtimeconfig.json
+*.deps.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+# Rider IDE
+.idea/
+
+# Mac-specific
+.DS_Store
+
+# Windows thumbs.db
+Thumbs.db
+
+# Test results
+TestResults/
+*.trx
+
+# Publish artifacts
+publish/
