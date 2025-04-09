@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# Assignments\\Calculator\\Calculator.csproj": {}
+    "D:\\C# Apps\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "D:\\C# Assignments\\Calculator\\Calculator.csproj": {
+    "D:\\C# Apps\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# Assignments\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "D:\\C# Apps\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "D:\\C# Assignments\\Calculator\\Calculator.csproj",
+        "projectPath": "D:\\C# Apps\\Calculator\\Calculator.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\C# Assignments\\Calculator\\obj\\",
+        "outputPath": "D:\\C# Apps\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
