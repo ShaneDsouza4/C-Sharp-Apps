@@ -1,38 +1,80 @@
-﻿var random = new Random();
-int diceRoll = random.Next(1, 7);
-int correctGuess = 0;
-//int userInput;
+﻿
+
+var game = new Game();
+var diceRollNumber = game._diceRolledNumber;
+
 Console.WriteLine("Dice rolled. Guess what number it shows in 3 tries.");
 
-int triesToRun = 3;
+var playerGuess = 0;
+var player = new Player();
+int chances = player.PlayerChances;
 
-
-for (int i=1; i<=triesToRun; i++)
+for(int i=1; i<=chances; i++)
 {
-    Console.WriteLine("Enter Number: ");
-    string userInput = Console.ReadLine();
-    bool isParsingSuccesfull = int.TryParse(userInput, out int number);
-    if (isParsingSuccesfull)
+    playerGuess = player.TakePlayerInput();
+    if(playerGuess == 0)
     {
-        if(number == diceRoll)
-        {
-            correctGuess = number;
-            break;
-        }
+        Console.WriteLine("Incorrect Input. Please try again."
+            );
+        chances++;
+    }
+
+    if(playerGuess == diceRollNumber)
+    {
+        break;
     }
     else
     {
-        Console.WriteLine("Incorrect Input. Please try again.");
+        Console.WriteLine("Wrong Number.");
     }
 }
 
-if (correctGuess == diceRoll)
+if(playerGuess == diceRollNumber)
 {
-    Console.WriteLine("You win");
+    Console.WriteLine("You Win");
 }
 else
 {
-    Console.WriteLine("You loose");
+    Console.WriteLine("You loose :(");
 }
 
+
 Console.ReadKey();
+
+class Player
+{
+    public int userGuess;
+    public int PlayerChances = 3;
+
+    public int TakePlayerInput()
+    {
+        Console.WriteLine("Enter Number");
+        string userInput = Console.ReadLine();
+
+        bool isParsingSuccesfull = int.TryParse(userInput, out int number);
+        if (isParsingSuccesfull)
+        {
+            return number;
+        }
+        return 0;
+    }
+
+}
+
+class Game
+{
+    public int _diceRolledNumber;
+
+    public Game()
+    {
+        _diceRolledNumber = RollDice();
+    }
+
+    private int RollDice()
+    {
+        var random = new Random();
+        return random.Next(1, 7);
+    }
+}
+
+
