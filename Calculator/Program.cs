@@ -2,17 +2,17 @@
 
 Console.WriteLine("Enter your first number: ");
 string num1 = Console.ReadLine();
-int num1AsDigit = Convert.ToInt32(num1);
+float num1AsDigit = float.Parse(num1);
 
 Console.WriteLine("Enter your second Number:");
 string num2 = Console.ReadLine();
-int num2AsDigit = int.Parse(num2);
+float num2AsDigit = float.Parse(num2);
 
 Console.WriteLine("What type of operation do you want to perform ?");
 Console.WriteLine("Please Enter 'a' for addition. 's' for subtraction, 'm' for multiplication, 'd' for division.");
-string operation = Console.ReadLine();
+string operation = Console.ReadLine().ToLower();
 
-int result = 0;
+float result = 0;
 
 switch (operation)
 {
@@ -26,7 +26,11 @@ switch (operation)
         result = num1AsDigit - num2AsDigit;
         break;
     case "d":
-        result = num1AsDigit / num2AsDigit;
+        result =  num2AsDigit == 0 ? float.NaN : num1AsDigit / num2AsDigit;
+        if (float.IsNaN(result))
+        {
+            Console.WriteLine("Cannot divide by 0");
+        }
         break;
     default:
         Console.WriteLine("Invalid operation");
