@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyTemperatureConverte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGame", "..\QuizGame\QuizGame.csproj", "{4A3E43B7-6D1E-4E70-AC44-342F9A853FB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryMatchGame", "..\MemoryMatchGame\MemoryMatchGame.csproj", "{42666E3E-DEA3-4234-A9B4-F028B7C6557A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{4A3E43B7-6D1E-4E70-AC44-342F9A853FB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A3E43B7-6D1E-4E70-AC44-342F9A853FB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A3E43B7-6D1E-4E70-AC44-342F9A853FB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42666E3E-DEA3-4234-A9B4-F028B7C6557A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42666E3E-DEA3-4234-A9B4-F028B7C6557A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42666E3E-DEA3-4234-A9B4-F028B7C6557A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42666E3E-DEA3-4234-A9B4-F028B7C6557A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
